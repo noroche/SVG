@@ -1,0 +1,52 @@
+﻿<html>
+<body >
+  <input type="radio" id="r1" name="W" checked="true" onclick="changeImg()">W/L 300/1000 <br>
+  <input type="radio" id="r2" name="W" onclick="changeImg()">W/L  600/1000 <br>
+  <input type="radio" id="r3" name="W" onclick="changeImg()" >W/L  1200/1000 <br>
+  
+  <div style="position: relative;">
+     <img id="img1" src="123.jpg" width="1200" height="960" style="position: absolute;  left: 0px; top:0px; z-index: 1;" />
+     <svg width="512" height="512"
+          style="position: absolute;  left: 0px; top:0px; z-index: 2;">
+         <circle cx="100" cy="100" r="60" stroke="pink" stroke-width="3" fill="red" />
+         <text x="0" y="15" fill="pink">I love myself109316115!</text>
+         <line x1="100" y1="500" x2="100" y2="200" style="stroke:rgb(50,250,250);stroke-width:10" />
+         Sorry, your browser does not support inline SVG.
+         <ellipse cx="400" cy="80" rx="100" ry="50"
+                  style="fill:pink;stroke:purple;stroke-width:2" />
+     </svg> 
+     <svg width="1200" height="960" style="position: absolute;  left: 500px; top:100px; z-index: 2;" ">
+         <defs>
+             <filter id="f1" x="0" y="0">
+                 <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+             </filter>
+         </defs>
+         <rect width="90" height="90" stroke="yellow" stroke-width="3" fill="pink" filter="url(#f1) " />
+         Sorry, your browser does not support inline SVG.
+     </svg>
+    
+  </div>
+</body>
+    <script type="text/javascript">
+    
+    function changeImg() { 
+    //  jpgDir/300-1000.PNG" 
+
+      //  alert("aaa");
+        if (document.getElementById("r1").checked == true) {
+                document.getElementById("img1").src = "jpgDir/300-1000.PNG" 
+            }
+
+        if (document.getElementById("r2").checked == true) {
+                document.getElementById("img1").src = "jpgDir/600-1500.PNG" 
+            }
+
+        if (document.getElementById("r3").checked == true) {
+                document.getElementById("img1").src = "jpgDir/1200-1000.PNG" 
+            }  
+
+        }        
+
+    </script>
+
+</html>
